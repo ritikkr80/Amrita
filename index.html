@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amrita: Preeclampsia Monitoring</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&displ
+ay=swap" rel="stylesheet">
+<!-- Chosen Palette: Fresh Green & Soft Grey -->
+<!-- Application Structure Plan: A clean, single-page website with distinct
+sections for an overview, key features (patient and clinical), and advantages.
+Navigation is smooth-scrolling. The layout is minimal, focusing on clear headings,
+concise text, and subtle green accents. -->
+<!-- Visualization & Content Choices: Uses simple text blocks, lists, and
+Unicode icons. No complex charts or interactive elements beyond navigation to
+maintain minimalism. Content is extracted and summarized from the PDF to be easily
+digestible. -->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+<style>
+body {
+font-family: 'Inter', sans-serif;
+background-color: #F8FAFC; /* Soft Grey */
+color: #374151; /* Dark Grey for text */
+}
+.text-green-primary {
+color: #16A34A; /* Tailwind green-600 */
+}
+.bg-green-primary {
+background-color: #16A34A; /* Tailwind green-600 */
+}
+.border-green-primary {
+border-color: #16A34A; /* Tailwind green-600 */
+}
+.hover\:bg-green-dark:hover {
+background-color: #15803D; /* Tailwind green-700 */
+}
+#logo{
+    position: absolute;
+    left: 20px;
+}
+.logo-head{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    align-items: center;
+}
+</style>
+</head>
+<body class="leading-relaxed">
+<!-- Header -->
+<header class="bg-white shadow-sm sticky top-0 z-40">
+<nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex
+justify-between items-center">
+<div class="logo-head">
+<img src="logo.jpg" alt="" width="50px" height="50px" id="logo">
+<a href="#" class="text-2xl font-bold text-green-primary">Amrita</a>
+</div>
+<div class="hidden md:flex space-x-6">
+<a href="#overview" class="text-gray-600 hover:text-green-primary
+transition-colors">Overview</a>
+<a href="#patient-features" class="text-gray-600
+hover:text-green-primary transition-colors">Patient Features</a>
+<a href="#clinical-features" class="text-gray-600
+hover:text-green-primary transition-colors">Clinical Hub</a>
+<a href="#advantages" class="text-gray-600 hover:text-green-primary
+transition-colors">Advantages</a>
+</div>
+<button id="mobile-menu-button" class="md:hidden text-gray-600
+hover:text-green-primary focus:outline-none">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0
+24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round"
+stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+</button>
+</nav>
+<div id="mobile-menu" class="hidden md:hidden bg-white pb-4">
+<a href="#overview" class="block px-4 py-2 text-gray-700
+hover:bg-gray-100">Overview</a>
+<a href="#patient-features" class="block px-4 py-2 text-gray-700
+hover:bg-gray-100">Patient Features</a>
+<a href="#clinical-features" class="block px-4 py-2 text-gray-700
+hover:bg-gray-100">Clinical Hub</a>
+<a href="#advantages" class="block px-4 py-2 text-gray-700
+hover:bg-gray-100">Advantages</a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section id="hero" class="bg-gradient-to-r from-green-50 to-green-100 py-20
+text-center">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h1 class="text-5xl font-extrabold text-green-primary mb-4">Amrita:
+Smart Preeclampsia Care</h1>
+<p class="text-xl text-gray-700 max-w-3xl mx-auto
+mb-8">Revolutionizing maternal health with an AI-powered system for early
+detection, monitoring, and management of preeclampsia.</p>
+<a href="#patient-features" class="inline-block bg-green-primary
+text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-green-dark
+transition-colors">Learn More</a>
+</div>
+</section>
+<!-- Overview Section -->
+<section id="overview" class="py-16 bg-white">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-4xl font-bold text-gray-800 mb-8">A New Standard in
+Maternal Health</h2>
+<p class="text-lg text-gray-600 max-w-4xl mx-auto">Amrita proposes
+a comprehensive system to address preeclampsia, a critical condition affecting
+pregnant individuals. Our approach integrates cutting-edge technology with
+user-centric design to provide timely insights and support.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+<div class="p-6 rounded-xl shadow-md bg-gray-50">
+<span class="text-5xl text-green-primary mb-4
+🏡block"> </span>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Home
+Monitoring</h3>
+<p class="text-gray-600 text-sm">Safe and accurate data
+collection from the comfort of home.</p>
+</div>
+<div class="p-6 rounded-xl shadow-md bg-gray-50">
+<span class="text-5xl text-green-primary mb-4
+🤖block"> </span>
+<h3 class="text-xl font-semibold text-gray-800
+mb-2">AI-Powered Analysis</h3>
+<p class="text-gray-600 text-sm">Intelligent algorithms for
+early risk stratification and alerts.</p>
+</div>
+<div class="p-6 rounded-xl shadow-md bg-gray-50">
+<span class="text-5xl text-green-primary mb-4
+٩block"> </span>
+<h3 class="text-xl font-semibold text-gray-800
+mb-2">Integrated Care</h3>
+<p class="text-gray-600 text-sm">Seamless connection
+between patients and healthcare providers.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Patient Features Section -->
+<section id="patient-features" class="py-16 bg-green-50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl font-bold text-gray-800 text-center mb-8">For
+Patients: User-Friendly Monitoring</h2>
+<p class="text-lg text-gray-600 text-center max-w-3xl mx-auto
+mb-12">Our app is designed to make daily monitoring simple and accessible for
+pregnant individuals.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4
+border-green-primary">
+<span class="text-4xl text-green-primary mb-3
+📈block"> </span>
+<h3 class="text-2xl font-semibold text-gray-800 mb-2">BP
+Entry</h3>
+<p class="text-gray-600">Manual input or camera-based scan
+from BP monitors for accurate readings.</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4
+border-green-primary">
+<span class="text-4xl text-green-primary mb-3
+🧪block"> </span>
+<h3 class="text-2xl font-semibold text-gray-800
+mb-2">Proteinuria Test</h3>
+<p class="text-gray-600">Enter dipstick results via
+smartphone camera interpretation or color code selection.</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4
+border-green-primary">
+<span class="text-4xl text-green-primary mb-3
+💬block"> </span>
+<h3 class="text-2xl font-semibold text-gray-800
+mb-2">Symptom Questionnaire</h3>
+<p class="text-gray-600">AI-guided questions for
+comprehensive symptom assessment (headache, swelling, etc.).</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4
+border-green-primary">
+<span class="text-4xl text-green-primary mb-3
+🧬block"> </span>
+<h3 class="text-2xl font-semibold text-gray-800
+mb-2">Biomarker Input</h3>
+<p class="text-gray-600">Simple entry for PLGF/sFLt results
+from LFIA kits, crucial for risk assessment.</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4
+border-green-primary">
+<span class="text-4xl text-green-primary mb-3
+🎬block"> </span>
+<h3 class="text-2xl font-semibold text-gray-800
+mb-2">Health Education</h3>
+<p class="text-gray-600">Short animated reels on
+preeclampsia, kit usage, and when to seek hospital care.</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4
+border-green-primary">
+<span class="text-4xl text-green-primary mb-3
+⏰block"> </span>
+<h3 class="text-2xl font-semibold text-gray-800 mb-2">Smart
+Reminders</h3>
+<p class="text-gray-600">Daily/weekly reminders for BP
+checks, protein tests, medication, and ANC appointments.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Clinical Features Section -->
+<section id="clinical-features" class="py-16 bg-white">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl font-bold text-gray-800 text-center mb-8">For
+Healthcare Workers: The Clinical Hub</h2>
+<p class="text-lg text-gray-600 text-center max-w-3xl mx-auto
+mb-12">A powerful interface designed to support doctors, ANMs, and ASHA workers in
+managing patient care.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4
+border-green-primary">
+<span class="text-4xl text-green-primary mb-3
+📊block"> </span>
+<h3 class="text-2xl font-semibold text-gray-800
+mb-2">Patient Dashboard</h3>
+<p class="text-gray-600">A clear overview highlighting
+high-risk patients and their current status.</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4
+border-green-primary">
+<span c
+📈lass="text-4xl text-green-primary mb-3 block"> </span>
+<h3 class="text-2xl font-semibold text-gray-800
+mb-2">Trends & History</h3>
+<p class="text-gray-600">Detailed graphs for BP and
+biomarker trends, along with complete patient history.</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4
+border-green-primary">
+<span class="text-4xl text-green-primary mb-3
+📞block"> </span>
+<h3 class="text-2xl font-semibold text-gray-800
+mb-2">Teleconsultation</h3>
+<p class="text-gray-600">Integrated system for remote
+consultations and advice sharing.</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4
+border-green-primary">
+<span class="text-4xl text-green-primary mb-3
+✍block"> </span>
+<h3 class="text-2xl font-semibold text-gray-800
+mb-2">Advice & Management</h3>
+<p class="text-gray-600">Doctors can easily upload advice,
+prescriptions, and manage follow-ups.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Advantages Section -->
+<section id="advantages" class="py-16 bg-green-50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-4xl font-bold text-gray-800 mb-8">Why Amrita
+Matters</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Our system
+offers significant advantages in the fight against preeclampsia.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-6 rounded-xl shadow-md">
+<h3 class="text-2xl font-semibold text-green-primary
+mb-2">Early Detection</h3>
+<p class="text-gray-600">Catching danger trends before
+severe symptoms appear, enabling timely intervention.</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-md">
+<h3 class="text-2xl font-semibold text-green-primary
+mb-2">Improved Outcomes</h3>
+<p class="text-gray-600">Reducing maternal and fetal
+morbidity and mortality rates through proactive care.</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-md">
+<h3 class="text-2xl font-semibold text-green-primary
+mb-2">Enhanced Accessibility</h3>
+<p class="text-gray-600">Bringing advanced monitoring to
+homes, especially in remote areas.</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-md">
+<h3 class="text-2xl font-semibold text-green-primary
+mb-2">Data-Driven Decisions</h3>
+<p class="text-gray-600">Providing healthcare providers
+with comprehensive data for informed clinical decisions.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<p>&copy; 2025 InnovateRx. All rights reserved.</p>
+<p class="text-sm text-gray-400 mt-2">Proposed State System for
+Preeclampsia and Morbidities Measurement.</p>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function () {
+mobileMenu.classList.toggle('hidden');
+});
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+behavior: 'smooth'
+});
+// Close mobile menu after clicking a link
+if (!mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+});
+</script>
+</body>
+</html>
